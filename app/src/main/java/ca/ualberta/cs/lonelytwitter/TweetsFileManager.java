@@ -11,10 +11,13 @@ import java.util.List;
 
 import android.content.Context;
 import android.util.Log;
+import ca.ualberta.cs.lonelytweet.NormalLonelyTweet;
+// change in public class to a default class.We can only access the TweetsFileManager within the same package
 
 public class TweetsFileManager {
 
-	private Context ctx;
+	private static final String FILE_NAME = "file.sav";		// change the FILE_NAME variable, so we can make sure the access is only within this class.
+	private final Context ctx;		// mark ctx variable final, so the variable will not be changed once it is initiated.
 
 	public TweetsFileManager(Context ctx) {
 		this.ctx = ctx;
